@@ -1,0 +1,27 @@
+# configs/config.yaml
+data:
+  dataset_name: "ag_news"
+  max_sequence_length: 128
+  batch_size: 16
+  num_workers: 4
+
+model:
+  num_experts: 8
+  expert_hidden_size: 2048
+  gate_hidden_size: 1024
+  dropout: 0.3
+
+training:
+  learning_rate: 0.0001
+  epochs: 10
+  gradient_clipping: 1.0
+  logging_steps: 100
+  validation_steps: 500
+
+visualization:
+  log_dir: "logs/"
+  checkpoint_dir: "checkpoints/"
+
+device:
+  use_gpu: true  # Set to false to force CPU usage
+  
